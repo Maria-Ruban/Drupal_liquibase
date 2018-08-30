@@ -3,7 +3,6 @@
   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
   xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog/1.9
                       http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-1.9.xsd">
-</databaseChangeLog>
 	<changeSet id="1535536266901-302" author="Ruban">
 		 <preConditions onFail="CONTINUE">
   			<sqlCheck expectedResult="0">select count(*) from watchdog</sqlCheck>
@@ -12,3 +11,4 @@
 	</changeSet>
 
 </databaseChangeLog>
+
