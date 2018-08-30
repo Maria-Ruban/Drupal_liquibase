@@ -2,21 +2,9 @@
 <databaseChangeLog xmlns="http://www.liquibase.org/xml/ns/dbchangelog" xmlns:ext="http://www.liquibase.org/xml/ns/dbchangelog-ext" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog-ext http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-ext.xsd http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.2.xsd">
     <changeSet author="root (generated)" id="1535546561061-1">
         <updateTable tableName="actions">
-            <column defaultValue="0" name="aid" remarks="Primary Key: Unique actions ID." type="VARCHAR(249)">
-                <constraints nullable="false"/>
+        	<column name="label" type="Publishes comment"/>
+       		 <where>type ='Publishe comment'</where>
             </column>
-            <column defaultValue="" name="type" remarks="The object that that action acts on (node, user, comment, system or custom types.)" type="VARCHAR(32)">
-                <constraints nullable="false"/>
-            </column>
-            <column defaultValue="" name="callback" remarks="The callback function that executes when the action runs." type="VARCHAR(255)">
-                <constraints nullable="false"/>
-            </column>
-            <column name="parameters" remarks="Parameters to be passed to the callback function." type="LONGBLOB">
-                <constraints nullable="false"/>
-            </column>
-            <column defaultValue="0" name="label" remarks="Label of the action." type="VARCHAR(255)">
-                <constraints nullable="false"/>
-            </column>
-        </createTable>
+        </updateTable>
     </changeSet>
 
