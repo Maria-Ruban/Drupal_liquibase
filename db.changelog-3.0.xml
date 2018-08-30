@@ -1,11 +1,11 @@
-<?xml version="1.0" encoding="UTF-8"?> 
-<databaseChangeLog 
-  xmlns="http://www.liquibase.org/xml/ns/dbchangelog/1.9" 
-  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
-  xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog/1.9
-                      http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-1.9.xsd"> 
-	
-	<changeSet author="Ruban" id="3">
-		<dropColumn tableName="watchdog" columnName="Liquibase_rename_test" />
-	</changeSet>
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<databaseChangeLog xmlns="http://www.liquibase.org/xml/ns/dbchangelog" xmlns:ext="http://www.liquibase.org/xml/ns/dbchangelog-ext" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog-ext http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-ext.xsd http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.2.xsd">
+    <changeSet author="root (generated)" id="1535546561061-300">
+        <update tableName="actions">
+        	<column name="label" value="Publishes comment"/>
+       		 <where>label='Publish comment'</where>
+        </update>
+    </changeSet>  
 </databaseChangeLog>
+
+
