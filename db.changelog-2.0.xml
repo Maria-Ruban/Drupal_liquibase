@@ -4,7 +4,6 @@
         <update tableName="actions">
         	<column name="label" value="Publishes comment"/>
        		 <where>label='Publish comment'</where>
-                </column>
         </update>
     </changeSet>  
 </databaseChangeLog>
