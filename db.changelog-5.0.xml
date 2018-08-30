@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<databaseChangeLog xmlns="http://www.liquibase.org/xml/ns/dbchangelog" xmlns:ext="http://www.liquibase.org/xml/ns/dbchangelog-ext" xmlns:xsi="http://www.w3.or
+g/2001/XMLSchema-instance" xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog-ext http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-ext.xsd
+ http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.2.xsd">
+
+<changesSet id="1535536266901-302" author="Ruban">
+ <preConditions onFail="CONTINUE">
+  <sqlCheck expectedResult="0">select count(*) from watchdog</sqlCheck>
+ </preConditions>
+ <dropTable tableName="watchdog"/>
+</changesSet>
+
+</databaseChangeLog>
