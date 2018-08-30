@@ -4,11 +4,11 @@
   xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog/1.9
                       http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-1.9.xsd">
 </databaseChangeLog>
-<changesSet id="1535536266901-302" author="Ruban">
- <preConditions onFail="CONTINUE">
-  <sqlCheck expectedResult="0">select count(*) from watchdog</sqlCheck>
- </preConditions>
- <dropTable tableName="watchdog"/>
-</changesSet>
+	<changeSet id="1535536266901-302" author="Ruban">
+		 <preConditions onFail="CONTINUE">
+  			<sqlCheck expectedResult="0">select count(*) from watchdog</sqlCheck>
+		 </preConditions>
+ 			<dropTable tableName="watchdog"/>
+	</changeSet>
 
 </databaseChangeLog>
