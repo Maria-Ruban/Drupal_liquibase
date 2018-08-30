@@ -1,14 +1,21 @@
-<?xml version="1.0" encoding="UTF-8"?> 
-<databaseChangeLog 
-  xmlns="http://www.liquibase.org/xml/ns/dbchangelog/1.9" 
-  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
-  xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog/1.9
-                      http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-1.9.xsd"> 
-
-	<changeSet author="ruban" id="1">
-		 <addColumn tableName="watchdog">
-	 		 <column name="liquibase_test" type="SMALLINT"/>
-	 	</addColumn> 
-        </changeSet>
-
+<databaseChangeLog xmlns="http://www.liquibase.org/xml/ns/dbchangelog" xmlns:ext="http://www.liquibase.org/xml/ns/dbchangelog-ext" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog-ext http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-ext.xsd http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.2.xsd">
+    <changeSet author="root (generated)" id="1535536266901-300">
+        <createTable tableName="watchdog">
+            <column defaultValue="0" name="aid" remarks="Primary Key: Unique actions ID." type="VARCHAR(255)">
+                <constraints nullable="false"/>
+            </column>
+            <column defaultValue="" name="type" remarks="The object that that action acts on (node, user, comment, system or custom types.)" type="VARCHAR(32)">
+                <constraints nullable="false"/>
+            </column>
+            <column defaultValue="" name="callback" remarks="The callback function that executes when the action runs." type="VARCHAR(255)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="parameters" remarks="Parameters to be passed to the callback function." type="LONGBLOB">
+                <constraints nullable="false"/>
+            </column>
+            <column defaultValue="0" name="label" remarks="Label of the action." type="VARCHAR(255)">
+                <constraints nullable="false"/>
+            </column>
+        </createTable>
+    </changeSet>
 </databaseChangeLog>
