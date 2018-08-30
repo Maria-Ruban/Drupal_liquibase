@@ -1,11 +1,10 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <databaseChangeLog xmlns="http://www.liquibase.org/xml/ns/dbchangelog" xmlns:ext="http://www.liquibase.org/xml/ns/dbchangelog-ext" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog-ext http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-ext.xsd http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.2.xsd">
     <changeSet author="root (generated)" id="1535546561061-300">
-        <updateTable tableName="actions">
+        <update tableName="actions">
         	<column name="label" type="Publishes comment"/>
        		 <where>type ='Publishe comment'</where>
             </column>
-        </updateTable>
-    </changeSet>
-
+        </update>
+    </changeSet>  
 </databaseChangeLog>
