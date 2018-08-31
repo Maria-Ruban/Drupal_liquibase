@@ -1,0 +1,13 @@
+<databasechangelog xmlns="http://www.liquibase.org/xml/ns/dbchangelog" xmlns:ext="http://www.liquibase.org/xml/ns/dbchangelog-ext" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemalocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.1.xsd
+    http://www.liquibase.org/xml/ns/dbchangelog-ext http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-ext.xsd">
+<changeset author="shay" id="4">
+
+
+    <insert tableName="test">
+        <column name="id" valueComputed="2"/>
+        <column name="Ordername" value="104"/>
+        <column name="Qty" value="4"/>
+    </insert>
+    <rollback>delete from test where id=2</rollback>
+</changeset>
+</databasechangelog>
