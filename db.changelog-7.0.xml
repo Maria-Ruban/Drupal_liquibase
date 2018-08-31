@@ -12,4 +12,4 @@
     </insert>
     <rollback>delete from test where id=2</rollback>
 </changeSet>
-</databasechangelog>
+</databaseChangeLog>
