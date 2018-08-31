@@ -6,9 +6,9 @@
         http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.1.xsd">  
     <changeSet id="3" author="Ruban">
     <insert tableName="watchdog">
-        <column name="aid" value='Test1'/>
-        <column name="type" value='Test1'/>
-        <column name="label" value='Test1'/>
+        <column name="aid" value="Test1"/>
+        <column name="type" value="Test1"/>
+        <column name="label" value="Test1"/>
     </insert>
 	</changeSet>
 </databaseChangeLog>
